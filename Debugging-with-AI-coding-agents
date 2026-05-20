@@ -1,0 +1,60 @@
+[Issue]:
+At timestamp, event/action occurred.
+
+[Pre-condition]:
+preconditions
+
+[Reproduction Steps]:
+
+1. step 1
+2. step 2
+3. step 3
+
+[Expected]:
+expected behavior
+
+[Actual]:
+actual behavior
+
+[Time Window]:
+start timestamp to end timestamp
+
+[Artifacts]:
+
+* Bugreport: path
+* Logs: path/snippet
+* Code: file/class/function names
+
+
+[Known Observations]:
+
+* key log or dump line
+* key log or dump line
+* key log or dump line
+
+[Context / Constraints]:
+
+* Focus on: <your-service-name> services, managers, delegates, controllers, service-state transitions, metadata flow, callbacks, and UI mapping
+* Ignore: non-<your-app-name> noise, unrelated framework logs unless directly causal
+
+
+[Goal]:
+Identify the root cause using logs, <your-app> dumps, crash evidence if applicable, and code. Do not assume behavior not supported by evidence. Distinguish symptom, trigger, crash mechanism, root cause, and contributing factors.
+
+[Tasks]:
+
+1. Build a precise timeline for the given time window.
+2. Correlate logs with <your-app>-related code paths.
+3. Inspect ALL relevant <your-app>-related dump sections and explain what state they represent during the failure window.
+4. Identify symptom, trigger, root cause, and contributing factors to the unexpected behavior/failure.
+5. Prioritize <your-app>-related components over unrelated framework noise unless clearly causal.
+6. Cite exact evidence from logs, dumps, and code.
+7. If the issue involves a crash, identify the exact crashing process, thread, exception/signal, stack frame, and code path before proposing a fix.
+
+
+[Output Format]:
+
+* Timeline: list events in chronological order, and for each step include the relevant supporting evidence from logs, dumps, and code if available.
+* Root cause: explain the root cause, trigger, and contributing factors, with direct supporting evidence from logs, dumps, and code.
+* Minimal fix (if applicable and justified by evidence): suggest the smallest safe fix and tie it to the observed behavior and relevant code path.
+
